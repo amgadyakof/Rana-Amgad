@@ -127,7 +127,7 @@ footer{text-align:center;margin-top:30px}
 var VENUE_NAME = "Gatz";
 var VENUE_NOTE = "Tap below for directions";
 var VENUE_MAP_URL = "https://maps.app.goo.gl/8hTavTQAgYmk4XBd6";
-var WA = "201112736179";
+var WA = "RanaAdel211";
 // --------------------------------------------------------
 var $ = function(i){return document.getElementById(i)};
 
@@ -250,9 +250,9 @@ if(VENUE_MAP_URL){ $("dir").href = VENUE_MAP_URL; $("dir").hidden = false; }
 
 function wa(msg){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg); }
 function upd(){
-  var n = $("nm").value.trim() || "A guest";
-  $("yes").href = wa("Hi! This is " + n + ". I’ll be there for Amgad & Rana’s engagement on 18 December 🎉💍");
-  $("no").href = wa("Hi! This is " + n + ". Sadly I can’t make it to Amgad & Rana’s engagement, but I’m sending all my love 💚");
+  var n = $("nm").value.trim() || "me";
+  $("yes").href = wa("Hi! This is " + n + ". I’ll be there for your engagement outing on 18 December 🎉💍");
+  $("no").href = wa("Hi! This is " + n + ". Sadly I can’t make it to your engagement outing, but I’m sending all my love 💚");
 }
 $("nm").addEventListener("input", upd); upd();
 </script>
