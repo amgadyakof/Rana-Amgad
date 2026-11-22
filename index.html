@@ -257,9 +257,9 @@ if(VENUE_MAP_URL){ $("dir").href = VENUE_MAP_URL; $("dir").hidden = false; }
 
 function wa(msg){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg); }
 function upd(){
-  var n = $("nm").value.trim() || "A guest";
-  $("yes").href = wa("Hi! This is " + n + ". I’ll be there for your engagement on 18 December 🎉💍");
-  $("no").href = wa("Hi! This is " + n + ". Sadly I can’t make it to your engagement, but I’m sending all my love 💚");
+  var n = $("nm").value.trim() || "me";
+  $("yes").href = wa("Hi! This is " + n + ". I’ll be there for your engagement outing on 18 December 🎉💍");
+  $("no").href = wa("Hi! This is " + n + ". Sadly I can’t make it to your engagement outing, but I’m sending all my love 💚");
 }
 $("nm").addEventListener("input", upd); upd();
 </script>
