@@ -109,7 +109,8 @@ footer{text-align:center;margin-top:30px}
     <h2>Good to know</h2>
     <div class="small" style="margin-bottom:8px">Minimum charge</div>
     <div class="amt serif">850 EGP <small>per person</small></div>
-    <p class="note">Partners are warmly welcome too 💚</p>
+    <p class="note">Covers 1 food item and 1 drink 💚</p>
+    <p class="note" style="margin-top:6px">Partners are warmly welcome too 💚</p>
   </section>
 
   <section>
@@ -131,7 +132,7 @@ footer{text-align:center;margin-top:30px}
 var VENUE_NAME = "Gatz";
 var VENUE_NOTE = "Tap below for directions";
 var VENUE_MAP_URL = "https://maps.app.goo.gl/8hTavTQAgYmk4XBd6";
-var WA = "RanaAdel211";
+var WA = "201112736179";
 // --------------------------------------------------------
 var $ = function(i){return document.getElementById(i)};
 
@@ -148,7 +149,7 @@ function setMusic(on){
   $("mus").classList.toggle("off", !on);
   if(on){
     try{ if(CTX && CTX.state === "suspended") CTX.resume(); }catch(e){}
-    AC.play().catch(function(){});
+    AC.play().catch(function(){ document.addEventListener("pointerdown", function r(){ document.removeEventListener("pointerdown", r); if(playing){ try{ if(CTX) CTX.resume(); }catch(e){} AC.play().catch(function(){}); } }); });
     if(G){ G.gain.cancelScheduledValues(CTX.currentTime); G.gain.linearRampToValueAtTime(.8, CTX.currentTime+1.2); } else AC.volume = .7;
   } else {
     if(G){ G.gain.cancelScheduledValues(CTX.currentTime); G.gain.linearRampToValueAtTime(0, CTX.currentTime+.8); } else AC.volume = 0;
